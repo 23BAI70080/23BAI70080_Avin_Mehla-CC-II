@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,t;
+string s,b;
+void Func(){
+    if(cin>>s){
+        b+=s;
+        if(s=="pair"){
+            b+='<',F(),b+=',',F(),b+='>';
+        }
+    }else{
+        t=1;
+    }
+}
+int main(){
+    cin>>n;
+    Func();
+    if(t||cin>>s) cout<<"Error occurred"<<endl;
+    else cout<<b<<endl;
+    return 0;
+}
